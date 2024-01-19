@@ -1,0 +1,87 @@
+/* Start Variables */
+:root {
+    --main-color: #e91e63;
+    --secondary-color: #ffa500;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eee;
+}
+.container {
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 250px;
+}
+/* End Global Rules */
+/* Start Components */
+.box {
+    width: 800px;
+    height: 250px;
+    background-color: var(--main-color);
+    position: relative;
+}
+.klein-box {
+    width: 600px;
+    height: 240px;
+    background-color: white;
+    position: absolute;
+    top: 5px;
+    left: 150px;
+}
+.klein-box::before {
+    content: "";
+    position: absolute;
+    border: 120px solid ;
+    border-color:  transparent white transparent transparent;
+    left: -240px;
+}
+.klein-box::after {
+    content: "";
+    position: absolute;
+    border: 120px solid ;
+    border-color:  transparent var(--main-color) transparent transparent;
+    top: 0;
+    right: 0;
+}
+.names {
+    position: relative;
+}
+p {
+    position: absolute;
+    top: 110px;
+}
+.names p:first-child {
+    border: 10px solid var(--main-color);
+    background-color: var(--main-color);
+    top: 100px;
+    color: white;
+    border-radius: 6px;
+}
+.names p:last-child {
+    margin-left: 8em;
+}
+.names p:last-child::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    right: -164px;
+    z-index: 5;
+}
+/* End Components */
